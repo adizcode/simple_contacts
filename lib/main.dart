@@ -9,9 +9,9 @@ void main() {
   runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => WelcomeScreen(),
-      '/contact_list': (context) => ContactsList(),
-      '/new_contact': (context) => NewContact(),
+      '/': (context) => const WelcomeScreen(),
+      '/contact_list': (context) => const ContactsList(),
+      '/new_contact': (context) => const NewContact(),
     },
   ));
 }

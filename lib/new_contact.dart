@@ -10,7 +10,7 @@ class NewContact extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('New Contact'),
+        title: const Text('New Contact'),
         centerTitle: true,
       ),
       body: Padding(
@@ -20,7 +20,7 @@ class NewContact extends StatelessWidget {
           children: [
             Row(
               children: [
-                Expanded(child: Text('Contact Name')),
+                const Expanded(child: Text('Contact Name')),
                 Expanded(child: TextFormField(
                   controller: nameController,
                 )),
@@ -28,7 +28,7 @@ class NewContact extends StatelessWidget {
             ),
             Row(
               children: [
-                Expanded(child: Text('Age')),
+                const Expanded(child: Text('Age')),
                 Expanded(child: TextFormField(controller: ageController,)),
               ],
             ),
@@ -39,7 +39,7 @@ class NewContact extends StatelessWidget {
                   'name': nameController.text,
                   'age': ageController.text,
                 });
-              }, child: Text('Submit')),
+              }, child: const Text('Submit')),
             ),
           ],
         )),

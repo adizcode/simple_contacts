@@ -17,7 +17,7 @@ class _ContactsListState extends State<ContactsList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contacts'),
+        title: const Text('Contacts'),
         centerTitle: true,
       ),
       body: ListView.builder(
@@ -26,8 +26,8 @@ class _ContactsListState extends State<ContactsList> {
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              title: Text(contactsBox.getAt(index)!.name, style: TextStyle(letterSpacing: 2.0, fontWeight: FontWeight.bold, fontSize: 18.0),),
-              subtitle: Text('${contactsBox.getAt(index)!.age} years old', style: TextStyle(fontSize: 15.0),),
+              title: Text(contactsBox.getAt(index)!.name, style: const TextStyle(letterSpacing: 2.0, fontWeight: FontWeight.bold, fontSize: 18.0),),
+              subtitle: Text('${contactsBox.getAt(index)!.age} years old', style: const TextStyle(fontSize: 15.0),),
               trailing: TextButton(
                 onPressed: () {
                   setState(() {
@@ -36,7 +36,7 @@ class _ContactsListState extends State<ContactsList> {
                     current.delete();
                   });
                 },
-                child: Text('Delete'),
+                child: const Text('Delete'),
                 style: TextButton.styleFrom(
                     backgroundColor: Colors.pink, primary: Colors.white),
               ),
@@ -63,7 +63,7 @@ class _ContactsListState extends State<ContactsList> {
             });
           }
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

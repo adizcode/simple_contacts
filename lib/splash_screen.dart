@@ -17,10 +17,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     await Hive.initFlutter();
     Hive.registerAdapter(ContactAdapter());
 
-    var contacts = await Hive.openBox<Contact>('contacts');
+    await Hive.openBox<Contact>('contacts');
 
     // Display the splash screen for a minimum of 2 seconds
-    await Future.delayed(const Duration(milliseconds: 2500));
+    await Future.delayed(const Duration(milliseconds: 2300));
 
     Navigator.pushReplacementNamed(context, '/contact_list');
   }
@@ -33,7 +33,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       body: Center(
         child: SpinKitCubeGrid(
